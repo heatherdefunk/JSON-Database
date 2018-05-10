@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii"><!-- Sets UTF --><!-- Title in address bar -->
+	<title>Admin</title>
+	<script src="https://www.luxiagov.org/assets/main.js"></script>
+	<script src="assets/main.py"></script>
+	<!-- Sets viewing --><meta name="viewport" content="width=device-width, initial-scale=1" /><!-- Sets stylesheets -->
+	<link href="assets/css/main.css" rel="stylesheet" /><!-- Sets favicon in address bar -->
+	<link href="https://vignette.wikia.nocookie.net/micronations/images/4/42/Luxia_Flag.png/revision/latest?cb=20171227172003" rel="icon" type="image/x-icon" />
+	<link href="https://vignette.wikia.nocookie.net/micronations/images/4/42/Luxia_Flag.png/revision/latest?cb=20171227172003" rel="shortcut icon" type="image/x-icon" /><!-- Google AdSense Initiation --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	</head>
+
+	<body>
+		<style>
+			/* Highlight selection for most browsers */
+			::selection {
+				color: white;
+				background: blue;
+			}
+
+			/* Highlight selection for mozilla */
+			::-moz-selection {
+				color: white;
+				background: blue;
+			}
+		</style>
+		<h1>Admin: Show All</h1>
+		<h2>The list of profiles are below</h2>
+		<table>
+			<tr>
+			<th> First Name </th>
+			<th> Last Name </th>
+			<th> Age </th>
+			<th> Email </th>
+			<th> Username </th>
+			</tr>
+			{% for profile in allprofiles['profiles'] %}
+
+  			<tr>
+    			<td> {{profile['name']}}</td>
+    			<td> {{profile['lname']}}</td>
+    			<td> {{profile['age']}}</td>
+    			<td> {{profile['mail']}}</td>
+    			<td> {{profile['cusername']}}<button>Delete</button></td>
+  			</tr>
+
+			{% endfor %}
+		</table>
+	</body>
+</html>
